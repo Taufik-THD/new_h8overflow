@@ -73,7 +73,7 @@ export default new Vuex.Store({
       const token = localStorage.getItem('authorization').split('*#$_.')[0]
       axios({
         method: 'post',
-        url: 'http://localhost:3000/question/'
+        url: 'http://35.240.245.38/question/'
       }).then(dataQuestion => {
         commit('allQuestion', dataQuestion.data)
       }).catch(err => {
@@ -86,7 +86,7 @@ export default new Vuex.Store({
     getAnswer ({ commit }, payload) {
       axios({
         method: 'get',
-        url: `http://localhost:3000/answer/${payload}`
+        url: `http://35.240.245.38/answer/${payload}`
       }).then(response => {
         console.log("response");
       }).catch(err => {
@@ -97,7 +97,7 @@ export default new Vuex.Store({
       const token = localStorage.getItem('authorization').split('*#$_.')[0]
       axios({
         method: 'post',
-        url: `http://localhost:3000/question/detail/answer`,
+        url: `http://35.240.245.38/question/detail/answer`,
         data: {
           QuestionId: payload.QuestionId,
           comment: payload.answer,
@@ -119,7 +119,7 @@ export default new Vuex.Store({
         const token = localStorage.getItem('authorization').split('*#$_.')[0]
         axios({
           method: 'post',
-          url: `http://localhost:3000/question/detail/upvote/${payload}`,
+          url: `http://35.240.245.38/question/detail/upvote/${payload}`,
           data: {
             token: token
           }
@@ -142,7 +142,7 @@ export default new Vuex.Store({
         const token = localStorage.getItem('authorization').split('*#$_.')[0]
         axios({
           method: 'post',
-          url: `http://localhost:3000/question/detail/downvote/${payload}`,
+          url: `http://35.240.245.38/question/detail/downvote/${payload}`,
           data: {
             token: token
           }
@@ -159,7 +159,7 @@ export default new Vuex.Store({
       const token = localStorage.getItem('authorization').split('*#$_.')[0]
       axios({
         method: 'post',
-        url: `http://localhost:3000/question/detail/upvoteanswer/${String(payload)}`,
+        url: `http://35.240.245.38/question/detail/upvoteanswer/${String(payload)}`,
         data: {
           questionId: payload,
           token: token
@@ -187,7 +187,7 @@ export default new Vuex.Store({
       const token = localStorage.getItem('authorization').split('*#$_.')[0]
       axios({
         method: 'post',
-        url: `http://localhost:3000/question/detail/downvoteanswer/${payload.answerId}`,
+        url: `http://35.240.245.38/question/detail/downvoteanswer/${payload.answerId}`,
         data: {
           questionId: payload,
           token: token

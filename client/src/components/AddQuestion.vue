@@ -74,7 +74,7 @@ export default {
 
       axios({
         method: 'post',
-        url: 'http://localhost:3000/question/add',
+        url: 'http://35.240.245.38/question/add',
         data: question
       }).then(response => {
         this.$router.push('questions')

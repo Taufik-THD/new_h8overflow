@@ -113,7 +113,7 @@ export default {
 
       axios({
         method: 'post',
-        url: 'http://localhost:3000/users',
+        url: 'http://35.240.245.38/users',
         data: user
       })
       .then(response => {
@@ -144,7 +144,7 @@ export default {
 
         axios({
           method: 'post',
-          url: 'http://localhost:3000/users/register',
+          url: 'http://35.240.245.38/users/register',
           data: user
         })
         .then((response) => {
